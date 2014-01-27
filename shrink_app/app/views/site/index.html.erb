@@ -1,0 +1,11 @@
+<div class="container">
+	Shrinky-Dinky
+
+	<%= form_for :link, url: links_path, method: :post do |l| %>
+
+	  <%= l.text_field :link, placeholder: "Enter URL you want shrunk" %> <br>
+
+	  <%= l.submit "Shrink It!" %>
+
+<% end %>
+</div>

@@ -1,0 +1,11 @@
+<% @links.each do |link| %>
+
+<div>
+	<div> <%= link.url_link %> </div>
+	<div> <%= link.random_string %> </div>
+	<div>
+		Your code for: <%= link.url_link %>, is: <%= link.random_string %>.  Go to: localhost:3000/:link/<%= link.random_string %> to visit your URL.
+	</div>
+</div>
+
+<% end %>

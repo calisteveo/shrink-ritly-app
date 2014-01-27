@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url_link: MyString
+  random_string: MyString
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  url_link: MyString
+  random_string: MyString
+  created_at: MyString
+  updated_at: MyString

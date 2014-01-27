@@ -1,0 +1,9 @@
+<%= form_for @link do |l| %>
+
+<!-- :link, url: links_path, method: :post -->
+
+  <%= l.text_field :url_link, placeholder: "Enter URL you want to have shrunk" %> <br>
+
+  <%= l.submit "Shrink It!" %>
+
+  <% end %>
