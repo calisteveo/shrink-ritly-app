@@ -1,1 +1,11 @@
-<%= render partial: :link, collection: @links %>
+<div class="container">
+	Shrinky-Dinky
+
+	<%= form_for :url_link, url: links_path, method: :post do |l| %>
+
+	  <%= l.text_field :url_link, placeholder: "Enter URL you want shrunk" %> <br>
+
+	  <%= l.submit "Shrink It!" %>
+
+<% end %>
+</div>

@@ -1,8 +1,6 @@
 ShrinkApp::Application.routes.draw do
-  
-  # Site Controller
 
-  root to: 'site#index'
+  root to: 'links#index'
 
   # Link Controller
 

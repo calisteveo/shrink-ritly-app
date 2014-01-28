@@ -1,7 +1,6 @@
 class LinksController < ApplicationController
 
   def index
-    @link = @@links_db
   end
 
   def new
@@ -10,11 +9,10 @@ class LinksController < ApplicationController
 
   def create
   	# Get link params
-  	new_link = params.require(:link).permit(:url_link, :random_string, :created_at, :updated_at)
+  	new_link = params.require(:url_link).permit(:url_link)
   	# Create new link
+  	new_link["random_string"] = SecureRandom.urlsafe_base64(8)
   	link = Link.create(new_link)
-  	link["random_string"] = SecureRandom.urlsafe_base64(8)
-  	#@@links_db << link
   	# redirect using named route
   	#  for the links_path, ('/links/:id'), using
   	#  the link.id it is provided
@@ -23,7 +21,8 @@ class LinksController < ApplicationController
 
   def show
   	id = params[:id]
-  	@link = Link.find(id)
+  	@url_link = Link.find(id)
+    redirect_to @url_link
   end
 
   # send a form to update link
